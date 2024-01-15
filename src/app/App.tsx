@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Layout from '../components/Layout/Layout';
 import WelcomePage from '../pages/Welcome/WelcomePage';
 import NotFoundPage from '../pages/NotFound/NotFoundPage';
 import SignInPage from '../pages/SignIn/SignInPage';
@@ -26,7 +27,16 @@ const App = () => {
 
   return (
     <Routes>
-      <Route path={AppRoutes.MAIN} element={<>Layout</>}>
+      <Route
+        path={AppRoutes.MAIN}
+        element={
+          <Layout
+            userLoggedIn={userLoggedIn}
+            setUserLoggedIn={setUserLoggedIn}
+            isLoading={isLoading}
+          />
+        }
+      >
         <Route index element={<WelcomePage />} />
         <Route
           element={
