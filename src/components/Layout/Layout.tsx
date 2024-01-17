@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import classes from './layout.module.scss';
+import cls from './layout.module.scss';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Loader from '../Loader/Loader';
+import { TranslatorContext, Language } from '../../context/translatorContextProvider';
+import { translationData } from '../../context/translationData/translationData';
 
 type LayoutProps = {
   userLoggedIn: boolean;
@@ -12,17 +15,20 @@ type LayoutProps = {
 
 const Layout = (props: LayoutProps) => {
   const { userLoggedIn, setUserLoggedIn, isLoading } = props;
+  const [lang, setLang] = useState<Language>('en');
 
   return !isLoading ? (
-    <div className={classes.wrapper}>
-      <Header userLoggedIn={userLoggedIn} setUserLoggedIn={setUserLoggedIn} />
-      <main className={classes.main}>
-        <Outlet />
-      </main>
-      <Footer />
-    </div>
+    <TranslatorContext.Provider value={{ lang, data: translationData, setLang }}>
+      <div className={cls.wrapper}>
+        <Header userLoggedIn={userLoggedIn} setUserLoggedIn={setUserLoggedIn} />
+        <main className={cls.main}>
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
+    </TranslatorContext.Provider>
   ) : (
-    <div className={classes.wrapper}>
+    <div className={cls.wrapper}>
       <Loader />
     </div>
   );

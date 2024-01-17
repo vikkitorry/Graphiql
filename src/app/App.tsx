@@ -33,7 +33,7 @@ const App = () => {
           />
         }
       >
-        <Route index element={<WelcomePage />} />
+        <Route index element={<WelcomePage userLoggedIn={userLoggedIn} />} />
         <Route
           element={
             <ProtectedRoute userLoggedIn={userLoggedIn} redirectPath={AppRoutes.GRAPHI_QL} />

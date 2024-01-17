@@ -1,11 +1,13 @@
 import { NavLink } from 'react-router-dom';
+import cls from './header.module.scss';
 import { useContext, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { TranslatorContext } from '../../context/translatorContextProvider';
+import { useWindowWidth } from '../../utils/hooks/useWindowWidth';
 import { AppRoutes } from '../../routes/routeConfig/routeConfig';
 import { Flex, Switch } from 'antd';
 import Service from '../../app/service/service';
+import BurgerMenu from './BurgerMenu/BurgerMenu';
 import logo from '../../assets/GraphiQL.png';
-import classes from './header.module.scss';
 
 type HeaderProps = {
   userLoggedIn: boolean;
@@ -16,6 +18,7 @@ const Header = ({ userLoggedIn, setUserLoggedIn }: HeaderProps) => {
   const { lang, data, setLang } = useContext(TranslatorContext);
   const [scrollPosition, setScrollPosition] = useState(0);
   const header = useRef<HTMLElement>(null);
+  const { width } = useWindowWidth();
 
   useLayoutEffect(() => {
     window.addEventListener('scroll', () => setScrollPosition(window.scrollY));
@@ -23,8 +26,8 @@ const Header = ({ userLoggedIn, setUserLoggedIn }: HeaderProps) => {
 
   useEffect(() => {
     scrollPosition > 0
-      ? header.current?.classList.add(classes.sticky)
-      : header.current?.classList.remove(classes.sticky);
+      ? header.current?.classList.add(cls.sticky)
+      : header.current?.classList.remove(cls.sticky);
   }, [scrollPosition]);
 
   const logout = async () => {
@@ -39,9 +42,9 @@ const Header = ({ userLoggedIn, setUserLoggedIn }: HeaderProps) => {
   };
 
   return (
-    <header ref={header} className={classes.header}>
-      <Flex gap={'middle'} align={'center'} className={classes.logobox}>
-        <NavLink to={AppRoutes.MAIN} className={classes.logo}>
+    <header ref={header} className={cls.header}>
+      <Flex gap={'middle'} align={'center'} className={cls.logobox}>
+        <NavLink to={AppRoutes.MAIN} className={cls.logo}>
           <img src={logo} alt="logo" />
         </NavLink>
 
@@ -54,11 +57,11 @@ const Header = ({ userLoggedIn, setUserLoggedIn }: HeaderProps) => {
         />
       </Flex>
 
-      <Flex gap={'middle'} justify={'center'} className={classes.mainLink}>
+      <Flex gap={'middle'} justify={'center'} className={cls.mainLink}>
         <NavLink to={'/'}>{data[lang].welcome}</NavLink>
       </Flex>
 
-      <Flex className={classes.authLinks}>
+      <Flex className={cls.authLinks}>
         {userLoggedIn ? (
           <Flex gap={'middle'} justify={'center'}>
             <NavLink to={AppRoutes.GRAPHI_QL}>{data[lang].mainPage}</NavLink>
@@ -73,6 +76,8 @@ const Header = ({ userLoggedIn, setUserLoggedIn }: HeaderProps) => {
           </Flex>
         )}
       </Flex>
+
+      {width <= 755 && <BurgerMenu userLoggedIn={userLoggedIn} logout={logout} />}
     </header>
   );
 };
