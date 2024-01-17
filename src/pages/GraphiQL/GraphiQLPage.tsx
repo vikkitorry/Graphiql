@@ -9,7 +9,7 @@ import { TranslatorContext } from '../../context/translatorContextProvider';
 import { json } from '@codemirror/lang-json';
 import { handleApiError } from '../../utils/helpers/handleApiError';
 import CodeMirror from '@uiw/react-codemirror';
-import Documentation from '../../components/Documentation.tsx/Documentation';
+import Documentation from '../../components/Documentation/Documentation';
 import FunctionalEditor from '../../components/FunctionalEditor/FunctionalEditor';
 import Loader from '../../components/Loader/Loader';
 import classes from './graphiql-page.module.scss';
@@ -176,7 +176,7 @@ const GraphiQLPage = () => {
               styles={{ body: { padding: '0' } }}
               width="320px"
             >
-              <Documentation />
+              <Documentation schema={schema} />
             </Drawer>
           ) : null}
         </Flex>
