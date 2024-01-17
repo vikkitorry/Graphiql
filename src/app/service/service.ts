@@ -8,12 +8,12 @@ import {
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyDkRC2kkMtT5uTWFC5btBEUQKCAKgK1Lh0',
-  authDomain: 'graphiql-app-abe6e.firebaseapp.com',
-  projectId: 'graphiql-app-abe6e',
-  storageBucket: 'graphiql-app-abe6e.appspot.com',
-  messagingSenderId: '668172885070',
-  appId: '1:668172885070:web:9eb23caaabc67f4abc371f',
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
