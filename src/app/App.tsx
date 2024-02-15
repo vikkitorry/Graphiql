@@ -17,12 +17,8 @@ const App = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    if (!loading) {
-      setUserLoggedIn(Boolean(user));
-      setIsLoading(loading);
-    } else {
-      setIsLoading(loading);
-    }
+    setUserLoggedIn(Boolean(user));
+    setIsLoading(loading);
   }, [loading, user]);
 
   return (
@@ -37,7 +33,7 @@ const App = () => {
           />
         }
       >
-        <Route index element={<WelcomePage />} />
+        <Route index element={<WelcomePage userLoggedIn={userLoggedIn} />} />
         <Route
           element={
             <ProtectedRoute userLoggedIn={userLoggedIn} redirectPath={AppRoutes.GRAPHI_QL} />

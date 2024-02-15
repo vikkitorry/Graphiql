@@ -9,7 +9,7 @@
 }
 
 .links {
-  flex: 0 1 140px;
+  flex: 0 1 10px;
   display: flex;
   gap: 10px;
 
@@ -32,10 +32,4 @@
   flex: 1 1 auto;
   display: flex;
   justify-content: center;
-}
-
-.rsschool {
-  flex: 0 1 140px;
-  display: flex;
-  justify-content: flex-end;
 }
