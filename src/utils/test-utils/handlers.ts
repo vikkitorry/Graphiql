@@ -1,5 +1,5 @@
 import { http, HttpResponse } from 'msw';
-import { schemaResponseMock } from '../../mocks/schemaMock';
+import { schemaResponseMock } from './mocks/schemaMock';
 
 export const handlers = [
   http.post('https://schema', async () => {

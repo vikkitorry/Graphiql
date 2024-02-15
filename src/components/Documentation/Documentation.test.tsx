@@ -2,7 +2,7 @@ import { expect, vi, test, describe, beforeEach } from 'vitest';
 import { MemoryRouter } from 'react-router-dom';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import Documentation from './Documentation';
-import { clientSchemaMock, schemaResponseMock } from '../../mocks/schemaMock';
+import { clientSchemaMock, schemaResponseMock } from '../../utils/test-utils/mocks/schemaMock';
 describe('Documentation', () => {
   beforeEach(() => {
     vi.clearAllMocks();

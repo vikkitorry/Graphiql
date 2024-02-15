@@ -8,7 +8,7 @@ import {
   isInterfaceType,
 } from 'graphql';
 import { DocumentationContext } from '../../../context/documentationContext';
-import { getTypeString } from '../../../utils/getTypeString';
+import { getTypeString } from '../../../utils/helpers/getTypeString';
 import classes from './type-link.module.scss';
 
 type TypeLinkProps = {
