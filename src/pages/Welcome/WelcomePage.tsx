@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import cls from './welcome-page.module.scss';
 import { TranslatorContext } from '../../context/translatorContextProvider';
 import { AppRoutes } from '../../routes/routeConfig/routeConfig';
+import WelcomeInfo from '../../components/WelcomeInfo/WelcomeInfo';
 
 type WelcomePageProps = {
   userLoggedIn: boolean;
@@ -11,8 +12,8 @@ type WelcomePageProps = {
 const WelcomePage = ({ userLoggedIn }: WelcomePageProps) => {
   const { lang, data } = useContext(TranslatorContext);
   return (
-    <section className={cls.container} data-testid="welcome-page">
-      <h2>{data[lang].welcomePage}</h2>
+    <main className={cls.container} data-testid="welcome-page">
+      <WelcomeInfo />
       <div className={cls.links}>
         {userLoggedIn ? (
           <>
@@ -31,7 +32,7 @@ const WelcomePage = ({ userLoggedIn }: WelcomePageProps) => {
           </>
         )}
       </div>
-    </section>
+    </main>
   );
 };
 
