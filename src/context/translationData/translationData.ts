@@ -9,6 +9,13 @@ export const translationData = {
     welcome: 'Welcome',
     mainPage: 'Main Page',
     welcomePage: 'Welcome Page',
+    welcomeTittle: 'A query language for your API',
+    welcomeTittleText:
+      'GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools.',
+    welcomeAboutTool:
+      'An Interactive Query Editor: This isn’t just a tool, it’s your playground for GraphQL queries.',
+    welcomeAboutProject:
+      'This project is a clone of the famous tool - GraphiQL. GraphiQL is a playground / IDE for graphQL requests.',
     goToGraphi: 'Go To GraphiQL',
     or: 'Or',
     regLink: 'register now',
@@ -23,6 +30,8 @@ export const translationData = {
     notConnectedStatus:
       'Schema could not be loaded. Please check the API URL (make sure the chosen API supports CORS)',
     defaultStatus: 'Schema not loaded',
+    response: 'response',
+    request: 'request',
     refetchSchema: 'Re-fetch schema',
     exploreDocumentation: 'Explore API Documentation',
     documentation: 'Documentation',
@@ -34,6 +43,7 @@ export const translationData = {
     fields: 'Fields',
     enumValues: 'Enum Values',
     error: 'Error',
+    mobileVersion: 'Available In Mobile Version',
   },
 
   ru: {
@@ -44,6 +54,13 @@ export const translationData = {
     email: 'Почта',
     password: 'Пароль',
     welcome: 'Добро пожаловать',
+    welcomeTittle: 'Язык запросов для вашего API',
+    welcomeTittleText:
+      'GraphQL — это язык запросов для API и среда для выполнения этих запросов с использованием существующих данных. GraphQL обеспечивает полное и понятное описание данных в вашем API, дает клиентам возможность запрашивать именно то, что им нужно, и не более того, упрощает постепенное развитие API и предоставляет мощные инструменты разработчика.',
+    welcomeAboutTool:
+      'Интерактивный редактор запросов: это не просто инструмент - это ваша площадка для работы с запросами GraphQL.',
+    welcomeAboutProject:
+      'Этот проект является клоном известного инструмента GraphiQL, который позволяет отправлять запросы.',
     mainPage: 'Главная',
     welcomePage: 'О проекте:',
     goToGraphi: 'Попробуйте GraphiQL',
@@ -60,6 +77,8 @@ export const translationData = {
     notConnectedStatus:
       'Не удалось загрузить схему. Пожалуйста, проверьте введенный URL-адрес (API должен поддерживать CORS)',
     defaultStatus: 'Схема не загружена',
+    response: 'ответ',
+    request: 'запрос',
     refetchSchema: 'Обновить схему',
     exploreDocumentation: 'Открыть документацию API',
     documentation: 'Документация',
@@ -71,5 +90,6 @@ export const translationData = {
     fields: 'Поля',
     enumValues: 'Значения перечислений',
     error: 'Ошибка',
+    mobileVersion: 'Доступно В Мобильной Версии',
   },
 };
