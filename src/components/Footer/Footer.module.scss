@@ -33,3 +33,24 @@
   display: flex;
   justify-content: center;
 }
+
+.sprite {
+  cursor: pointer;
+  display: block;
+  background-image: url(../../assets/sprite.png);
+  width: 40px;
+  height: 40px;
+  background-size: 160px, 40px;
+  background-repeat: no-repeat;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.gmail {
+  background-position: 0px 0px;
+}
+
+.telegram {
+  background-position: -40px 0px;
+}
