@@ -51,7 +51,7 @@
   height: auto;
 }
 
-.hexagon {
+.animatedHexagon {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -133,6 +133,8 @@
   }
 }
 
+//mobile
+
 .mobileContainer {
   display: flex;
   align-items: center;
@@ -149,10 +151,11 @@
   transition: 0.5s;
   cursor: pointer;
   @media screen and (max-width: 690px) {
-    width: 180px;
-    height: 290px;
+    width: 170px;
+    height: 280px;
   }
 }
+
 .mobileSection img {
   position: absolute;
   width: 100%;
@@ -177,4 +180,105 @@
 .mobileSection:hover img:nth-child(1) {
   transform: translate(40px, -40px);
   opacity: 0.4;
+}
+
+//tech
+
+.gradient {
+  background: linear-gradient(90deg, rgba(255, 227, 193, 1) 30%, rgba(240, 251, 255, 1) 70%);
+}
+
+.techContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 10px;
+}
+
+.hexagon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  width: 100px;
+  height: 100px;
+  background: #fac88bc7;
+  border: 3px solid var(--tittle-text-color);
+}
+
+.triangle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  background: var(--light-panel-bg-color);
+  border: 3px solid var(--tittle-text-color);
+}
+
+//contacts
+
+.contactsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.sprite {
+  cursor: pointer;
+  display: block;
+  background-image: url(../../assets/sprite.png);
+  width: 70px;
+  height: 70px;
+  background-size: 280px, 70px;
+  background-repeat: no-repeat;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.gmail {
+  background-position: 0px 0px;
+}
+
+.telegram {
+  background-position: -70px 0px;
+}
+
+.mail {
+  background-position: -140px 0px;
+}
+
+.github {
+  background-position: -212px 0px;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  height: 20px;
+  &:before {
+    content: '';
+    width: 100%;
+    height: 10px;
+    border-top: 2px solid var(--tittle-text-color);
+  }
+  &:after {
+    content: '';
+    width: 100%;
+    height: 10px;
+    border-top: 2px solid var(--tittle-text-color);
+  }
+  & span {
+    border: 2px solid var(--tittle-text-color);
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+  }
 }

@@ -44,6 +44,9 @@ export const translationData = {
     enumValues: 'Enum Values',
     error: 'Error',
     mobileVersion: 'Available In Mobile Version',
+    techStack: 'Project Tech Stack',
+    contactMe: 'Contact Me',
+    start: "Let's start",
   },
 
   ru: {
@@ -91,5 +94,8 @@ export const translationData = {
     enumValues: 'Значения перечислений',
     error: 'Ошибка',
     mobileVersion: 'Доступно В Мобильной Версии',
+    techStack: 'Технический стек проекта',
+    contactMe: 'Свяжитесь со мной',
+    start: 'Давайте начнем',
   },
 };
