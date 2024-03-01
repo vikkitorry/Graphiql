@@ -47,9 +47,9 @@ const WelcomeInfo = () => {
       <div className={cls.container}>
         <h2 className={cls.tittle}>{data[lang].contactMe}</h2>
         <div className={cls.contactsContainer}>
-          <a href="" className={`${cls.sprite} ${cls.gmail}`} />
+          <a href="mailto:vikkitorry6716@gmail.com" className={`${cls.sprite} ${cls.gmail}`} />
           <a href="https://telegram.me/mokroe_more" className={`${cls.sprite} ${cls.telegram}`} />
-          <a href="" className={`${cls.sprite} ${cls.mail}`} />
+          <a href="mailto:vikkitorry6716@mail.ru" className={`${cls.sprite} ${cls.mail}`} />
           <a
             href="https://github.com/vikkitorry/Graphiql"
             className={`${cls.sprite} ${cls.github}`}
