@@ -1,4 +1,4 @@
-# GraphiQL
+# [GraphiQL](https://graphi-app.netlify.app/)
 
 ## Project Description
 
