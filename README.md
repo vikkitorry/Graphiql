@@ -1,4 +1,4 @@
-# GraphiQL
+# [GraphiQL](https://graphi-app.netlify.app/)
 
 ## Project Description
 
@@ -33,7 +33,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd graphiql-app
+  cd GraphiQL
 ```
 
 Install dependencies
@@ -72,4 +72,9 @@ Prettier
 
 - [@vikkitorry](https://github.com/vikkitorry)
 
-##### We made this project according to [TASK](https://github.com/rolling-scopes-school/tasks/blob/master/react/modules/graphiql.md)
+##### I made this project according to [TASK](https://github.com/rolling-scopes-school/tasks/blob/master/react/modules/graphiql.md)
+
+## Contacts
+
+- [Telegram](https://telegram.me/mokroe_more)
+- [Gmail](mailto:vikkitorry6716@gmail.com)
